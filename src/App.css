@@ -56,7 +56,7 @@
   background-image: url(Assets/food.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow:inset 0 0 0 2000px rgba(19, 18, 19, 0.7);
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
 }
 
 .btns {
@@ -91,7 +91,7 @@ button {
 
 button:hover {
   border: 1px solid transparent;
-  background-color: blue;
+  background-color: rgb(13, 31, 2);
   color: white;
 }
 
@@ -102,23 +102,4 @@ button:focus {
   color: white;
 }
 
-ion-icon {
-  margin-right: 15px;
-  font-size: 18px;
-  color:red;
-  vertical-align: sub;
-}
-
-ion-icon:hover {
-  border: 1px solid transparent;
-  background-color: blue;
-  color: red;
-}
-
-ion-icon:focus {
-  box-shadow: unset;
-  border-color: red;
-  background-color: unset;
-  color: red;
-}
 
