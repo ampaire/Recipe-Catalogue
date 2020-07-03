@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import MdPaperPlane from 'react-ionicons/lib/MdPaperPlane';
-import IosLogIn from 'react-ionicons/lib/IosLogIn';
+import MdLogIn from 'react-ionicons/lib/MdLogIn';
 
 const Main = () => (
   <div className="app-container">
@@ -12,14 +12,14 @@ const Main = () => (
             className="btn btn-outline-primary"
             type="button"
           >
-            <IosLogIn color="#ffff" className="icons" />
+            <MdLogIn color="#ffff" className="icons" />
             SignUp to get started
           </button>
           <button
             className="btn btn-outline-primary"
             type="button"
           >
-            <IosLogIn color="#ffff" className="icons" />
+            <MdLogIn color="#ffff" className="icons" />
             Login
           </button>
         </div>
