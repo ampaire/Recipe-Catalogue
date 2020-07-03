@@ -12,7 +12,7 @@ const Main = () => (
             className="btn btn-outline-primary"
             type="button"
           >
-            <Link to="/login" className="links">
+            <Link to="/signup" className="links">
               <MdLogIn color="#ffff" className="icons" />
               SignUp to get started
             </Link>
