@@ -75,11 +75,17 @@ button {
   color: white;
   margin: 20px 15px 0 0;
   font-size: 14px;
+  text-decoration: none;
   padding: 10px;
   background: transparent;
   border: 1px solid white;
   border-radius: 5px;
   min-width: 100px;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
 }
 
 .icons {

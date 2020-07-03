@@ -1,7 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import MdPaperPlane from 'react-ionicons/lib/MdPaperPlane';
 import MdLogIn from 'react-ionicons/lib/MdLogIn';
+import { Link } from 'react-router-dom';
 
 const Main = () => (
   <div className="app-container">
@@ -12,15 +12,19 @@ const Main = () => (
             className="btn btn-outline-primary"
             type="button"
           >
-            <MdLogIn color="#ffff" className="icons" />
-            SignUp to get started
+            <Link to="/login" className="links">
+              <MdLogIn color="#ffff" className="icons" />
+              SignUp to get started
+            </Link>
           </button>
           <button
             className="btn btn-outline-primary"
             type="button"
           >
-            <MdLogIn color="#ffff" className="icons" />
-            Login
+            <Link to="/login" className="links">
+              <MdLogIn color="#ffff" className="icons" />
+              Login
+            </Link>
           </button>
         </div>
         <div>
@@ -28,8 +32,10 @@ const Main = () => (
             className="btn btn-outline-primary"
             type="button"
           >
-            <MdPaperPlane color="#ffff" className="icons" />
-            Explore
+            <Link to="/Explore" className="links">
+              <MdPaperPlane color="#ffff" className="icons" />
+              Explore
+            </Link>
           </button>
         </div>
       </div>
@@ -37,7 +43,7 @@ const Main = () => (
         <h2 className="app-title">The CookBook</h2>
         <blockquote>
           <p className="app-index-quote">
-            Explore the world's Best dishes
+            Explore the world&apos;s Best dishes
           </p>
           <footer className="author">― Effie Phemia Ampaire</footer>
         </blockquote>
