@@ -76,12 +76,12 @@ const LoginForm = () => (
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link to="/forgotpsswd" className="links">
+              <Link href="/forgotpsswd" className="links">
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link to="/signup" className="links">
+              <Link href="/signup" className="links">
                 Don&apos;t have an account? Sign Up
               </Link>
             </Grid>

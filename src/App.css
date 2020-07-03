@@ -97,7 +97,7 @@ button {
 
 button:hover {
   border: 1px solid transparent;
-  background-color: rgb(13, 31, 2);
+  background-color: blue;
   color: white;
 }
 
@@ -108,5 +108,36 @@ button:focus {
   color: white;
 }
 
+.login-page {
+  height: 100vh;
+}
 
+.login-bg-img {
+  background-image: url(Assets/food.jpg);
+  background-Repeat: no-repeat;
+  background-Color:grey;
+  background-size: cover;
+  background-position: center;
+}
 
+.login-paper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-avt {
+  margin: 5%;
+}
+
+.login-form {
+  width: 100%;
+  margin: 5%;
+  padding: 4%;
+}
+
+.sbmit-signup {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
