@@ -37,7 +37,7 @@ const SignUp = () => (
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className="login-form" noValidate>
+        <form className="login-form" Validate>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
