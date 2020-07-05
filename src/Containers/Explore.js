@@ -81,7 +81,7 @@ export default function Album() {
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Album layout
+              The CookBook
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
               Explore our Gallery. The recipe&apo;s require you to pay to access them.
@@ -112,7 +112,7 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/food/random"
+                    image="https://source.unsplash.com/random"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
