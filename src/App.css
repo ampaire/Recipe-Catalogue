@@ -110,6 +110,8 @@ button:focus {
 
 .login-page {
   height: 100vh;
+  display: block;
+  text-align: center;
 }
 
 .login-bg-img {
