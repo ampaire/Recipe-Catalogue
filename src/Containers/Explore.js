@@ -7,8 +7,8 @@ import getCategories from '../Actions/fetchCategories';
 import Category from '../Components/Categories';
 import PageLoader from '../Components/Loading';
 import {
-  getProductsError,
-  getProductsPending,
+  getRecipesError,
+  getRecipesPending,
   getCategoriesList,
   categoryName,
   categoryDetails,
@@ -54,9 +54,9 @@ const mapStateToProps = state => {
   const { categories } = state;
   return (
     {
-      error: getProductsError(categories),
+      error: getRecipesError(categories),
       categories: getCategoriesList(categories),
-      pending: getProductsPending(categories),
+      pending: getRecipesPending(categories),
     }
   );
 };

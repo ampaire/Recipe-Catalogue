@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import Recipes from '../Components/Recipes';
 import fetchAllRecipes from '../Actions/fetchAll';
 import fetchMeal from '../Actions/fetchSingle';
-import { getProductsError, getProducts, getProductsPending } from '../Settings/Index';
+import { getRecipesError, getRecipes, getRecipesPending } from '../Settings/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
 import PageLoader from '../Components/Loading';
 
 const RecipesList = props => {
   const {
-    products, pending, fetchAllRecipes, category,
+    recipes, pending, fetchAllRecipes, category,
   } = props;
 
   useEffect(() => {
@@ -27,8 +27,8 @@ const RecipesList = props => {
   return (
     <div>
       <div className="container">
-        {products.map(el => (
-          <Link to={`/meal/${el.idMeal}`} key={Math.random() * 1000}>
+        {recipes.map(el => (
+          <Link to={`/recipe/${el.idMeal}`} key={Math.random() * 1000}>
             <Recipes
               src={el.strMealThumb}
               name={el.strMeal}
@@ -42,23 +42,23 @@ const RecipesList = props => {
 };
 
 RecipesList.defaultProps = {
-  products: [''],
+  recipes: [''],
 };
 
 RecipesList.propTypes = {
   pending: PropTypes.bool.isRequired,
   category: PropTypes.string.isRequired,
   fetchAllRecipes: PropTypes.func.isRequired,
-  products: PropTypes.arrayOf(String),
+  recipes: PropTypes.arrayOf(String),
 };
 
 const mapStateToProps = state => {
   const { allMeals } = state;
   return (
     {
-      error: getProductsError(allMeals),
-      products: getProducts(allMeals),
-      pending: getProductsPending(allMeals),
+      error: getRecipesError(allMeals),
+      recipes: getRecipes(allMeals),
+      pending: getRecipesPending(allMeals),
       current: allMeals.category,
     }
   );

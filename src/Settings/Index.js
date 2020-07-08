@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
-export const getProducts = state => state.products;
-export const getProductsPending = state => state.pending;
-export const getProductsError = state => state.error;
+export const getRecipes = state => state.recipes;
+export const getRecipesPending = state => state.pending;
+export const getRecipesError = state => state.error;
 export const getImg = state => state.strMealThumb;
 export const getArea = state => state.strArea;
 export const getName = state => state.strMeal;

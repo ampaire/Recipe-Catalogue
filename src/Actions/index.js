@@ -1,13 +1,13 @@
-const fetchProductsPending = () => ({
+const fetchRecipesPending = () => ({
   type: 'FETCH_PRODUCTS_PENDING',
 });
 
-const fetchProductsSuccess = products => ({
+const fetchRecipesSuccess = recipes => ({
   type: 'FETCH_PRODUCTS_SUCCESS',
-  products,
+  recipes,
 });
 
-const fetchProductsError = error => ({
+const fetchRecipesError = error => ({
   type: 'FETCH_PRODUCTS_ERROR',
   error,
 });
@@ -16,7 +16,7 @@ const UPDATE_CATEGORY = category => ({
   category,
 });
 
-const fetchSingleMeal = details => ({
+const fetchSingleRecipes = details => ({
   type: 'FETCH_MEAL_SUCCESS',
   details,
 });
@@ -29,11 +29,11 @@ const fetchCategories = categories => ({
 const resetSelected = () => ({ type: 'RESET' });
 
 export {
-  fetchProductsError,
-  fetchProductsPending,
-  fetchProductsSuccess,
+  fetchRecipesError,
+  fetchRecipesPending,
+  fetchRecipesSuccess,
   UPDATE_CATEGORY,
-  fetchSingleMeal,
+  fetchSingleRecipes,
   resetSelected,
   fetchCategories,
 };
