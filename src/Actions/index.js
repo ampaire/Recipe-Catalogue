@@ -1,14 +1,14 @@
 const fetchRecipesPending = () => ({
-  type: 'FETCH_PRODUCTS_PENDING',
+  type: 'FETCH_RECIPES_PENDING',
 });
 
 const fetchRecipesSuccess = recipes => ({
-  type: 'FETCH_PRODUCTS_SUCCESS',
+  type: 'FETCH_RECIPES_SUCCESS',
   recipes,
 });
 
 const fetchRecipesError = error => ({
-  type: 'FETCH_PRODUCTS_ERROR',
+  type: 'FETCH_RECIPES_ERROR',
   error,
 });
 const UPDATE_CATEGORY = category => ({
@@ -17,7 +17,7 @@ const UPDATE_CATEGORY = category => ({
 });
 
 const fetchSingleRecipes = details => ({
-  type: 'FETCH_MEAL_SUCCESS',
+  type: 'FETCH_RECIPE_SUCCESS',
   details,
 });
 

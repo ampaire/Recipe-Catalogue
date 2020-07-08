@@ -1,22 +1,22 @@
 import {
-  fetchProductsPending,
-  fetchProductsSuccess,
-  fetchProductsError,
+  fetchRecipesPending,
+  fetchRecipesSuccess,
+  fetchRecipesError,
 } from './index';
 
 function fetchAllRecipes(term) {
   return dispatch => {
-    dispatch(fetchProductsPending());
+    dispatch(fetchRecipesPending());
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${term}`)
       .then(res => res.json())
       .then(res => {
         if (res.error) {
           throw (res.error);
         }
-        dispatch(fetchProductsSuccess(res.meals));
+        dispatch(fetchRecipesSuccess(res.meals));
       })
       .catch(error => {
-        dispatch(fetchProductsError(error));
+        dispatch(fetchRecipesError(error));
       });
   };
 }
