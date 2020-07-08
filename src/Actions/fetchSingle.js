@@ -4,7 +4,7 @@ import {
   fetchProductsError,
 } from './index';
 
-function fetchMeal(id) {
+function fetchRecipe(id) {
   return dispatch => {
     dispatch(fetchProductsPending());
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -22,4 +22,4 @@ function fetchMeal(id) {
   };
 }
 
-export default fetchMeal;
+export default fetchRecipe;

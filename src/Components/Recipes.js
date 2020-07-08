@@ -6,7 +6,7 @@ const Image = ({
 }) => (
   <div className={className}>
     <img className="bg-img" src={src} alt={name} />
-    <h1 className="img-txt">{name}</h1>
+    <h1 className="img-text">{name}</h1>
   </div>
 );
 
