@@ -17,22 +17,13 @@ const Main = () => (
               Recipes
             </Link>
           </button>
-          <button
-            className="btn btn-outline-primary"
-            type="button"
-          >
-            <Link to="/login" className="links">
-              <MdLogIn color="#ffff" className="icons" />
-              Login
-            </Link>
-          </button>
         </div>
         <div>
           <button
             className="btn btn-outline-primary"
             type="button"
           >
-            <Link to="/Explore" className="links">
+            <Link to="/explore" className="links">
               <MdPaperPlane color="#ffff" className="icons" />
               Explore
             </Link>
