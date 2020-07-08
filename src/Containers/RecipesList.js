@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import MealPreview from '../Components/Recipes';
 import fetchAllMeals from '../Actions/fetchAll';
 import fetchMeal from '../Actions/fetchSingle';
-import { getRecipesError, getRecipes, getRecipesPending } from '../Settings/Index';
+import { getRecipesError, getRecipes, getProductsPending } from '../Settings/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
 import PageLoader from '../Components/Loading';
 
@@ -58,7 +58,7 @@ const mapStateToProps = state => {
     {
       error: getRecipesError(allMeals),
       recipes: getRecipes(allMeals),
-      pending: getRecipesPending(allMeals),
+      pending: getProductsPending(allMeals),
       current: allMeals.category,
     }
   );

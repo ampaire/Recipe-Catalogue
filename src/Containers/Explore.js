@@ -8,7 +8,7 @@ import Category from '../Components/Categories';
 import PageLoader from '../Components/Loading';
 import {
   getRecipesError,
-  getRecipesPending,
+  getProductsPending,
   getCategoriesList,
   categoryName,
   categoryDetails,
@@ -56,7 +56,7 @@ const mapStateToProps = state => {
     {
       error: getRecipesError(categories),
       categories: getCategoriesList(categories),
-      pending: getRecipesPending(categories),
+      pending: getProductsPending(categories),
     }
   );
 };

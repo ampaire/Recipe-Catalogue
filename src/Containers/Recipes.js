@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import CategoryFilter from '../Components/Categories';
 import fetchAllMeals from '../Actions/fetchAll';
-import { getRecipesPending } from '../Settings/Index';
+import { getProductsPending } from '../Settings/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
 import RecipeCatalogue from './RecipesList';
 
@@ -66,7 +66,7 @@ const mapStateToProps = state => {
   const { allMeals } = state;
   return (
     {
-      pending: getRecipesPending(allMeals),
+      pending: getProductsPending(allMeals),
       current: allMeals.category,
     }
   );
