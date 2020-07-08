@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import MealPreview from '../Components/Recipes';
 import fetchAllMeals from '../Actions/fetchAll';
 import fetchMeal from '../Actions/fetchSingle';
-import { getProductsError, getProducts, getProductsPending } from '../Settings/Index';
+import { getRecipesError, getRecipes, getRecipesPending } from '../Settings/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
 import PageLoader from '../Components/Loading';
 
 const RecipeCatalogue = props => {
   const {
-    products, pending, fetchAllMeals, category,
+    recipes, pending, fetchAllMeals, category,
   } = props;
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const RecipeCatalogue = props => {
   return (
     <div>
       <div className="container">
-        {products.map(el => (
+        {recipes.map(el => (
           <Link to={`/meal/${el.idMeal}`} key={Math.random() * 1000}>
             <MealPreview
               src={el.strMealThumb}
@@ -42,23 +42,23 @@ const RecipeCatalogue = props => {
 };
 
 RecipeCatalogue.defaultProps = {
-  products: [''],
+  recipes: [''],
 };
 
 RecipeCatalogue.propTypes = {
   pending: PropTypes.bool.isRequired,
   category: PropTypes.string.isRequired,
   fetchAllMeals: PropTypes.func.isRequired,
-  products: PropTypes.arrayOf(String),
+  recipes: PropTypes.arrayOf(String),
 };
 
 const mapStateToProps = state => {
   const { allMeals } = state;
   return (
     {
-      error: getProductsError(allMeals),
-      products: getProducts(allMeals),
-      pending: getProductsPending(allMeals),
+      error: getRecipesError(allMeals),
+      recipes: getRecipes(allMeals),
+      pending: getRecipesPending(allMeals),
       current: allMeals.category,
     }
   );

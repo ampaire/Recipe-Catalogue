@@ -7,18 +7,18 @@ const initialState = {
 
 const RecipesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_PRODUCTS_PENDING':
+    case 'FETCH_RECIPES_PENDING':
       return {
         ...state,
         pending: true,
       };
-    case 'FETCH_PRODUCTS_SUCCESS':
+    case 'FETCH_RECIPES_SUCCESS':
       return {
         ...state,
         pending: false,
         recipes: action.recipes,
       };
-    case 'FETCH_PRODUCTS_ERROR':
+    case 'FETCH_RECIPES_ERROR':
       return {
         ...state,
         pending: false,

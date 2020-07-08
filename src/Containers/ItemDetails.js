@@ -7,7 +7,7 @@ import PageLoader from '../Components/Loading';
 import RecipeDescription from '../Components/Description';
 import { resetSelected } from '../Actions/index';
 import {
-  getImg, getArea, getIntructions, getIngredient, getName, categoryName, getProductsPending,
+  getImg, getArea, getIntructions, getIngredient, getName, categoryName, getRecipesPending,
 } from '../Settings/Index';
 
 const Image = ({
@@ -76,7 +76,7 @@ const mapStateToProps = state => {
       ingredients: getIngredient(details),
       name: getName(details),
       category: categoryName(details),
-      pending: getProductsPending(details),
+      pending: getRecipesPending(details),
     }
   );
 };

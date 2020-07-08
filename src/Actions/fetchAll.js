@@ -13,7 +13,7 @@ function fetchAllRecipes(term) {
         if (res.error) {
           throw (res.error);
         }
-        dispatch(fetchRecipesSuccess(res.meals));
+        dispatch(fetchRecipesSuccess(res.recipes));
       })
       .catch(error => {
         dispatch(fetchRecipesError(error));
