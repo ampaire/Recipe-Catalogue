@@ -10,7 +10,7 @@ const Image = ({
   </div>
 );
 
-const Recipe = ({
+const Meal = ({
   src, name,
 }) => (
   <Image className="meal-preview shadow" src={src} name={name} alt={name} />
@@ -26,8 +26,8 @@ Image.propTypes = {
   className: PropTypes.string,
 };
 
-Recipe.propTypes = {
+Meal.propTypes = {
   src: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
-export default Recipe;
+export default Meal;

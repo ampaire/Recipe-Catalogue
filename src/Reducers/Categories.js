@@ -6,7 +6,7 @@ const initialState = {
 
 export const CategoriesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_RECIPES_PENDING':
+    case 'FETCH_PRODUCTS_PENDING':
       return {
         ...state,
         pending: true,
@@ -17,7 +17,7 @@ export const CategoriesReducer = (state = initialState, action) => {
         pending: false,
         categories: action.categories,
       };
-    case 'FETCH_RECIPES_ERROR':
+    case 'FETCH_PRODUCTS_ERROR':
       return {
         ...state,
         pending: false,

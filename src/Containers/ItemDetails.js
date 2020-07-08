@@ -38,8 +38,8 @@ const MealDetails = props => {
   }
 
   return (
-    <div className="h-80 w-70 w-100 d-flex img-container ">
-      <div className=" d-flex jutify-a single-rec w-100">
+    <div className="h-80 w-70 w-100 d-flex">
+      <div className=" d-flex jutify-a recip w-100">
         <Image className="recip-img m-20 w-50 shadow" src={img} name={name} />
         <div className="w-50">
           <RecipeDescription category={category} className="w-100" area={area} ingredients={ingredients} />
@@ -53,16 +53,6 @@ const MealDetails = props => {
       </div>
     </div>
   );
-};
-
-Image.defaultProps = {
-  className: 'img-rcp',
-};
-
-Image.propTypes = {
-  src: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  className: PropTypes.string,
 };
 
 const mapStateToProps = state => {
@@ -79,6 +69,16 @@ const mapStateToProps = state => {
       pending: getProductsPending(details),
     }
   );
+};
+
+Image.defaultProps = {
+  className: 'img-rcp',
+};
+
+Image.propTypes = {
+  src: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 const mapDispatchToProps = {

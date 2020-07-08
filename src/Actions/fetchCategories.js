@@ -1,12 +1,12 @@
 import {
-  fetchRecipesPending,
+  fetchProductsPending,
   fetchCategories,
-  fetchRecipesError,
+  fetchProductsError,
 } from './index';
 
 function getCategories() {
   return dispatch => {
-    dispatch(fetchRecipesPending());
+    dispatch(fetchProductsPending());
     fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
       .then(res => res.json())
       .then(res => {
@@ -16,7 +16,7 @@ function getCategories() {
         dispatch(fetchCategories(res.categories));
       })
       .catch(error => {
-        dispatch(fetchRecipesError(error));
+        dispatch(fetchProductsError(error));
       });
   };
 }
