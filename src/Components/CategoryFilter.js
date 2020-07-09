@@ -7,7 +7,7 @@ const CategoryFilter = ({ onChange, value }) => {
     <div className="d-flex justify-c">
       <h1>Category Filter</h1>
       <select onChange={onChange} value={value} className="filter m-20">
-        {categories.map(e => <option key={Math.random() * 100} value={e}>{e}</option>)}
+        {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
       </select>
     </div>
   );

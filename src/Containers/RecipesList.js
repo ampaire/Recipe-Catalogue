@@ -9,9 +9,9 @@ import { getProductsError, getProducts, getProductsPending } from '../Settings/I
 import { UPDATE_CATEGORY } from '../Actions/index';
 import PageLoader from '../Components/Loading';
 
-const RecipeCatalogue = props => {
+const MealsList = props => {
   const {
-    recipes, pending, fetchAllMeals, category,
+    products, pending, fetchAllMeals, category,
   } = props;
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const RecipeCatalogue = props => {
   return (
     <div>
       <div className="container">
-        {recipes.map(el => (
+        {products.map(el => (
           <Link to={`/meal/${el.idMeal}`} key={Math.random() * 1000}>
             <MealPreview
               src={el.strMealThumb}
@@ -41,15 +41,15 @@ const RecipeCatalogue = props => {
   );
 };
 
-RecipeCatalogue.defaultProps = {
-  recipes: [''],
+MealsList.defaultProps = {
+  products: [''],
 };
 
-RecipeCatalogue.propTypes = {
+MealsList.propTypes = {
   pending: PropTypes.bool.isRequired,
   category: PropTypes.string.isRequired,
   fetchAllMeals: PropTypes.func.isRequired,
-  recipes: PropTypes.arrayOf(String),
+  products: PropTypes.arrayOf(String),
 };
 
 const mapStateToProps = state => {
@@ -57,7 +57,7 @@ const mapStateToProps = state => {
   return (
     {
       error: getProductsError(allMeals),
-      recipes: getProducts(allMeals),
+      products: getProducts(allMeals),
       pending: getProductsPending(allMeals),
       current: allMeals.category,
     }
@@ -73,4 +73,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(RecipeCatalogue);
+)(MealsList);

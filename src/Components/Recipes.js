@@ -1,30 +1,14 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const Image = ({
-  className, src, name,
-}) => (
-  <div className={className}>
-    <img className="bg-img" src={src} alt={name} />
-    <h1 className="img-text">{name}</h1>
-  </div>
-);
+import ReciperImgage from './RecipeImage';
 
 const Meal = ({
   src, name,
 }) => (
-  <Image className="meal-preview shadow" src={src} name={name} alt={name} />
+  <ReciperImgage className="meal-preview shadow" src={src} name={name} alt={name} />
 );
-
-Image.defaultProps = {
-  className: 'img-rcp',
-};
-
-Image.propTypes = {
-  src: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
 
 Meal.propTypes = {
   src: PropTypes.string.isRequired,

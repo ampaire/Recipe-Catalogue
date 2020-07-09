@@ -3,20 +3,20 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Recipes from '../Components/Recipes';
-import fetchAllRecipes from '../Actions/fetchAll';
+import fetchAllMeals from '../Actions/fetchAll';
 import fetchMeal from '../Actions/fetchSingle';
 import { getProductsError, getProducts, getProductsPending } from '../Settings/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
 import PageLoader from '../Components/Loading';
 
-const RecipesList = props => {
+const MealsList = props => {
   const {
-    recipes, pending, fetchAllRecipes, category,
+    products, pending, fetchAllMeals, category,
   } = props;
 
   useEffect(() => {
-    fetchAllRecipes(category);
-  }, [category, fetchAllRecipes]);
+    fetchAllMeals(category);
+  }, [category, fetchAllMeals]);
 
   const shouldComponentRender = () => {
     if (category === undefined || pending === true) return false;
@@ -27,8 +27,8 @@ const RecipesList = props => {
   return (
     <div>
       <div className="container">
-        {recipes.map(el => (
-          <Link to={`/recipe/${el.idMeal}`} key={Math.random() * 1000}>
+        {products.map(el => (
+          <Link to={`/meal/${el.idMeal}`} key={Math.random() * 1000}>
             <Recipes
               src={el.strMealThumb}
               name={el.strMeal}
@@ -41,15 +41,15 @@ const RecipesList = props => {
   );
 };
 
-RecipesList.defaultProps = {
-  recipes: [''],
+MealsList.defaultProps = {
+  products: [''],
 };
 
-RecipesList.propTypes = {
+MealsList.propTypes = {
   pending: PropTypes.bool.isRequired,
   category: PropTypes.string.isRequired,
-  fetchAllRecipes: PropTypes.func.isRequired,
-  recipes: PropTypes.arrayOf(String),
+  fetchAllMeals: PropTypes.func.isRequired,
+  products: PropTypes.arrayOf(String),
 };
 
 const mapStateToProps = state => {
@@ -57,7 +57,7 @@ const mapStateToProps = state => {
   return (
     {
       error: getProductsError(allMeals),
-      recipes: getProducts(allMeals),
+      products: getProducts(allMeals),
       pending: getProductsPending(allMeals),
       current: allMeals.category,
     }
@@ -65,7 +65,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  fetchAllRecipes,
+  fetchAllMeals,
   addFilter: UPDATE_CATEGORY,
   fetchMeal,
 };
@@ -73,4 +73,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(RecipesList);
+)(MealsList);

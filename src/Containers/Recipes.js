@@ -40,7 +40,7 @@ const AllMeals = props => {
       </div>
       <h1 className="text-c g-text">
         {' '}
-        All Recipes for
+        Available Recipes For
         {' '}
         <br />
         {current || category}

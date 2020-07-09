@@ -1,23 +1,11 @@
 import React from 'react';
 import MdPaperPlane from 'react-ionicons/lib/MdPaperPlane';
-import MdLogIn from 'react-ionicons/lib/MdLogIn';
 import { Link } from 'react-router-dom';
 
 const Main = () => (
   <div className="app-container">
     <div className="btns">
       <div className="btn-outlined">
-        <div>
-          <button
-            className="btn btn-outline-primary"
-            type="button"
-          >
-            <Link to="/recipes" className="links">
-              <MdLogIn color="#ffff" className="icons" />
-              Recipes
-            </Link>
-          </button>
-        </div>
         <div>
           <button
             className="btn btn-outline-primary"

@@ -5,7 +5,7 @@ const RecipeDescription = ({
   category, area, ingredients, className,
 }) => (
   <div className={className}>
-    <p className="text-b p-10 category">
+    <p className="text-b p-10">
       <span className="m-10">
         Category :
       </span>
@@ -14,7 +14,7 @@ const RecipeDescription = ({
       </span>
     </p>
     <hr />
-    <p className="text-b area p-10">
+    <p className="text-b p-10">
       <span className="m-10">
         Area :
       </span>
@@ -34,7 +34,7 @@ const RecipeDescription = ({
 );
 
 RecipeDescription.defaultProps = {
-  className: 'w-50 description',
+  className: 'w-50',
 };
 
 RecipeDescription.propTypes = {
