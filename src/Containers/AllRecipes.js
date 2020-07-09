@@ -1,63 +1,71 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import Recipes from '../Components/Recipes';
+import CategoryFilter from '../Components/CategoryFilter';
 import fetchAllMeals from '../Actions/fetchAll';
-import fetchMeal from '../Actions/fetchSingle';
-import { getProductsError, getProducts, getProductsPending } from '../Settings/Index';
+import { getProductsPending } from '../Settings/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
-import PageLoader from '../Components/Loading';
+import MealsList from './RecipesList';
 
-const MealsList = props => {
+const AllMeals = props => {
   const {
-    products, pending, fetchAllMeals, category,
+    addFilter, match, current, fetchAllMeals,
   } = props;
 
-  useEffect(() => {
-    fetchAllMeals(category);
-  }, [category, fetchAllMeals]);
+  const { category } = match.params;
 
-  const shouldComponentRender = () => {
-    if (category === undefined || pending === true) return false;
-    return true;
+  const handleFilterChange = evt => {
+    const newCategory = evt.target.value;
+    addFilter(evt.target.value);
+    fetchAllMeals(newCategory);
   };
 
-  if (!shouldComponentRender()) { return <PageLoader />; }
   return (
     <div>
-      <div className="container">
-        {products.map(el => (
-          <Link to={`/meal/${el.idMeal}`} key={Math.random() * 1000}>
-            <Recipes
-              src={el.strMealThumb}
-              name={el.strMeal}
-              id={el.idMeal}
-            />
-          </Link>
-        ))}
+      <div className="d-flex">
+
+        <span className="w-50">
+
+          <CategoryFilter onChange={handleFilterChange} value={current} />
+        </span>
+
+        <span className="w-50 d-flex justify-c">
+          <h1 className="m-20"> Current:</h1>
+          <h1>
+            {' '}
+            {current || category}
+            {' '}
+          </h1>
+        </span>
       </div>
+      <h1 className="text-c g-text">
+        {' '}
+        Available Recipes For
+        {' '}
+        <br />
+        {current || category}
+      </h1>
+      <MealsList category={category} />
     </div>
   );
 };
 
-MealsList.defaultProps = {
-  products: [''],
+AllMeals.defaultProps = {
+  category: 'Beef',
 };
 
-MealsList.propTypes = {
-  pending: PropTypes.bool.isRequired,
-  category: PropTypes.string.isRequired,
+AllMeals.propTypes = {
+  category: PropTypes.string,
+  addFilter: PropTypes.func.isRequired,
   fetchAllMeals: PropTypes.func.isRequired,
-  products: PropTypes.arrayOf(String),
+  current: PropTypes.string.isRequired,
+  match: PropTypes.shape().isRequired,
 };
 
 const mapStateToProps = state => {
   const { allMeals } = state;
   return (
     {
-      error: getProductsError(allMeals),
-      products: getProducts(allMeals),
       pending: getProductsPending(allMeals),
       current: allMeals.category,
     }
@@ -67,10 +75,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
   fetchAllMeals,
   addFilter: UPDATE_CATEGORY,
-  fetchMeal,
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(MealsList);
+)(AllMeals);

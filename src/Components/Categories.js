@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReciperImgage from './RecipeImage';
+import Image from './RecipeImage';
 
 const Category = ({
   src, name,
 }) => (
-  <ReciperImgage className="category shadow" src={src} name={name} />
+  <Image className="category shadow" src={src} name={name} />
 );
 
 Category.propTypes = {

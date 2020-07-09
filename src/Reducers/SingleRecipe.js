@@ -6,18 +6,18 @@ const initialState = {
 
 const SingleRecipeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_RECIPES_PENDING':
+    case 'FETCH_PRODUCTS_PENDING':
       return {
         ...state,
         pending: true,
       };
-    case 'FETCH_RECIPES_SUCCESS':
+    case 'FETCH_MEAL_SUCCESS':
       return {
         ...state,
         pending: false,
         details: action.details,
       };
-    case 'FETCH_RECIPES_ERROR':
+    case 'FETCH_PRODUCTS_ERROR':
       return {
         ...state,
         pending: false,

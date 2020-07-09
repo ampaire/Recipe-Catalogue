@@ -4,20 +4,12 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import fetchMeal from '../Actions/fetchSingle';
 import PageLoader from '../Components/Loading';
+import Image from '../Components/RecipeImage';
 import RecipeDescription from '../Components/Description';
 import { resetSelected } from '../Actions/index';
 import {
   getImg, getArea, getIntructions, getIngredient, getName, categoryName, getProductsPending,
 } from '../Settings/Index';
-
-const Image = ({
-  className, src, name,
-}) => (
-  <div className={className}>
-    <img className="bg-img" src={src} alt={name} />
-    <h1 className="img-text">{name}</h1>
-  </div>
-);
 
 const MealDetails = props => {
   const {
@@ -69,16 +61,6 @@ const mapStateToProps = state => {
       pending: getProductsPending(details),
     }
   );
-};
-
-Image.defaultProps = {
-  className: 'img-rcp',
-};
-
-Image.propTypes = {
-  src: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  className: PropTypes.string,
 };
 
 const mapDispatchToProps = {
