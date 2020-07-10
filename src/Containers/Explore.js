@@ -31,7 +31,7 @@ const AllCategories = props => {
 
   return (
     <div>
-      <h1 className="text-c g-text"> EXPlORE THE WORLD&apos;S BEST RECIPES</h1>
+      <h1 className="welcome-text"> EXPLORE THE WORLD&apos;S BEST RECIPES</h1>
       <div className="container">
         {categories.map(el => <Link key={el.idCategory} to={`/category/${el.strCategory}`}><Category name={categoryName(el)} description={categoryDetails(el)} src={categoryImage(el)} /></Link>)}
       </div>
