@@ -6,8 +6,8 @@ import SingleRecipeReducer from './SingleRecipe';
 import { CategoriesReducer } from './Categories';
 
 const finalReducer = combineReducers({
-  Recipes: RecipesReducer,
-  SingleRecipe: SingleRecipeReducer,
+  allMeals: RecipesReducer,
+  singleMeal: SingleRecipeReducer,
   categories: CategoriesReducer,
 });
 

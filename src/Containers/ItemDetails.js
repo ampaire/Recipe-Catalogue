@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import fetchMeal from '../Actions/fetchSingle';
 import PageLoader from '../Components/Loading';
-import Image from '../Components/RecipeImage';
+import ReciperImgage from '../Components/RecipeImage';
 import RecipeDescription from '../Components/Description';
 import { resetSelected } from '../Actions/index';
 import {
@@ -32,7 +32,7 @@ const MealDetails = props => {
   return (
     <div className="h-80 w-70 w-100 d-flex">
       <div className=" d-flex jutify-a recip w-100">
-        <Image className="recip-img m-20 w-50 shadow" src={img} name={name} />
+        <ReciperImgage className="recip-img m-20 w-50 shadow" src={img} name={name} />
         <div className="w-50">
           <RecipeDescription category={category} className="w-100" area={area} ingredients={ingredients} />
           <Link to="/">

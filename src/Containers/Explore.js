@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import PropTypes, { object } from 'prop-types';
 import getCategories from '../Actions/fetchCategories';
 import Category from '../Components/Categories';
 import PageLoader from '../Components/Loading';
@@ -31,7 +31,7 @@ const AllCategories = props => {
 
   return (
     <div>
-      <h1 className="text-c g-text"> EXPORE OUR AVAILABLE CATEGORIES</h1>
+      <h1 className="text-c g-text"> EXPlORE THE WORLD&apos;S BEST RECIPES</h1>
       <div className="container">
         {categories.map(el => <Link key={el.idCategory} to={`/category/${el.strCategory}`}><Category name={categoryName(el)} description={categoryDetails(el)} src={categoryImage(el)} /></Link>)}
       </div>
@@ -41,7 +41,7 @@ const AllCategories = props => {
 
 AllCategories.propTypes = {
   pending: PropTypes.bool.isRequired,
-  categories: PropTypes.arrayOf(Array).isRequired,
+  categories: PropTypes.arrayOf(object).isRequired,
   getCategories: PropTypes.func.isRequired,
 };
 

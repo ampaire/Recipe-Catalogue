@@ -30,7 +30,7 @@ const AllMeals = props => {
         </span>
 
         <span className="w-50 d-flex justify-c">
-          <h1 className="m-20"> Current:</h1>
+          <h1 className="m-20"> Currently Showing:</h1>
           <h1>
             {' '}
             {current || category}
@@ -40,10 +40,10 @@ const AllMeals = props => {
       </div>
       <h1 className="text-c g-text">
         {' '}
-        Available Recipes For
+        {current || category}
+        Recipes
         {' '}
         <br />
-        {current || category}
       </h1>
       <MealsList category={category} />
     </div>
