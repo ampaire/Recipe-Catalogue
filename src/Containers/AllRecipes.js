@@ -22,29 +22,23 @@ const AllMeals = props => {
 
   return (
     <div>
-      <div className="d-flex">
+      <div className="">
 
-        <span className="w-50">
+        <span className="">
 
           <CategoryFilter onChange={handleFilterChange} value={current} />
         </span>
-
-        <span className="w-50 d-flex justify-c">
-          <h1 className="m-20"> Currently Showing:</h1>
-          <h1>
-            {' '}
-            {current || category}
-            {' '}
-          </h1>
-        </span>
+        <h1 className="text-center">
+          {' '}
+          Currently Showing:
+          {' '}
+          {current || category }
+          {' '}
+          {' '}
+          Recipes
+          {' '}
+        </h1>
       </div>
-      <h1 className="text-c g-text">
-        {' '}
-        {current || category}
-        Recipes
-        {' '}
-        <br />
-      </h1>
       <MealsList category={category} />
     </div>
   );
