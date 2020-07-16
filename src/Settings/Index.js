@@ -13,7 +13,7 @@ export const categoryImage = category => category.strCategoryThumb;
 export const getIngredient = meal => {
   const result = [];
   // eslint-disable-next-line no-plusplus
-  for (let i = 1; i <= 20; i++) {
+  for (let i = 1; i <= 30; i++) {
     if (meal[`strIngredient${i}`] === '') {
       break;
     }

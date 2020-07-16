@@ -34,7 +34,7 @@ const MealDetails = props => {
       <div className="item-c">
         <Image className="item-i shadow" src={img} name={name} />
         <div className="w-50">
-          <RecipeDescription category={category} className="w-100" area={area} ingredients={ingredients} />
+          <RecipeDescription category={category} className="ingridients" area={area} ingredients={ingredients} />
           <Link to="/">
             <button type="button" onClick={resetSelected} className="shadow btn">Home</button>
           </Link>
