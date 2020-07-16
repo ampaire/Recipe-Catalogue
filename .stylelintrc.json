@@ -5,9 +5,7 @@
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
     "at-rule-empty-line-before": ["always"],
-    "rule-empty-line-before": ["always", {
-      except: ["first-nested"]
-    }]
+    "rule-empty-line-before": ["always"]
   },
   "ignoreFiles": [
     "build/**",
