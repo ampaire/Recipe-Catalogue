@@ -50,13 +50,13 @@
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
 }
 
 .btns {
   margin-top: 25%;
   width: 100%;
-  height: 100vh;  
+  height: 100vh;
 }
 
 .btn-outlined {
@@ -102,18 +102,18 @@ button:focus {
   color: white;
 }
 
-.home-link{
+.home-link {
   display: flex;
   text-decoration: none;
   justify-content: space-evenly;
   border-radius: 5px;
   border-bottom: rgb(129, 129, 129) 2px solid;
-  box-shadow: 0px 5px 9px 3px rgba(209,209,209,1);
+  box-shadow: 0px 5px 9px 3px rgba(209, 209, 209, 1);
   background-color: rgb(250, 209, 106);
 }
 
-.logo-img{
-  width:100px;
+.logo-img {
+  width: 100px;
   margin-top: 5px;
   height: 80px;
 }
@@ -145,10 +145,10 @@ button:focus {
   margin-bottom: 20px;
   position: relative;
   background-color: rgb(253, 251, 250);
-  -webkit-box-shadow: 0px 5px 9px 2px rgba(209,209,209,1);
-  -moz-box-shadow: 0px 5px 9px 2px rgba(209,209,209,1);
-  box-shadow: 0px 5px 9px 2px rgba(209,209,209,1);
-  transition: box-shadow 500ms,border 1s;
+  -webkit-box-shadow: 0px 5px 9px 2px rgba(209, 209, 209, 1);
+  -moz-box-shadow: 0px 5px 9px 2px rgba(209, 209, 209, 1);
+  box-shadow: 0px 5px 9px 2px rgba(209, 209, 209, 1);
+  transition: box-shadow 500ms, border 1s;
 }
 
 .filter {
@@ -168,15 +168,15 @@ button:focus {
   text-align: center;
 }
 
-.top-text{
-	max-width: 350px;
+.top-text {
+  max-width: 350px;
   width: 100%;
   color: black;
-	display: inline-block;
-	border-radius: 3px;
-	text-decoration: none;
-	margin: 0 10px 15px ;
-  box-shadow: 7px 7px 50px -10px rgba(0, 0, 0, .6);
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  margin: 0 10px 15px;
+  box-shadow: 7px 7px 50px -10px rgba(0, 0, 0, 0.6);
 }
 
 .top-text:hover {
@@ -186,18 +186,18 @@ button:focus {
 
 .meal-preview {
   width: 100%;
-	height: 100%;
+  height: 100%;
 }
 
-.meal-name{
-	max-width: 350px;
-	width: 100%;
-	display: inline-block;
-	border-radius: 3px;
-	text-decoration: none;
-	color: #000;
-	margin: 0 10px 15px;
-    box-shadow: 7px 7px 50px -10px rgba(0, 0, 0, .5);
+.meal-name {
+  max-width: 350px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #000;
+  margin: 0 10px 15px;
+  box-shadow: 7px 7px 50px -10px rgba(0, 0, 0, 0.5);
 }
 
 .rcp-image {
@@ -272,18 +272,18 @@ spin-container {
 }
 @keyframes rotate {
   0% {
-    transform: rotateZ(-360deg)
+    transform: rotateZ(-360deg);
   }
   100% {
-    transform: rotateZ(0deg)
+    transform: rotateZ(0deg);
   }
 }
 @keyframes rotate2 {
   0% {
-    transform: rotateZ(360deg)
+    transform: rotateZ(360deg);
   }
   100% {
-    transform: rotateZ(0deg)
+    transform: rotateZ(0deg);
   }
 }
 #text {
