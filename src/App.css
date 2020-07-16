@@ -135,9 +135,9 @@ button:focus {
   margin-bottom: 20px;
   position: relative;
   background-color: rgb(253, 251, 250);
-  -webkit-box-shadow: 0px 5px 9px 2px rgba(209, 209, 209, 1);
-  -moz-box-shadow: 0px 5px 9px 2px rgba(209, 209, 209, 1);
-  box-shadow: 0px 5px 9px 2px rgba(209, 209, 209, 1);
+  -webkit-box-shadow: 1px 5px 9px 2px rgba(209, 209, 209, 1);
+  -moz-box-shadow: 1px 5px 9px 2px rgba(209, 209, 209, 1);
+  box-shadow: 1px 5px 9px 2px rgba(209, 209, 209, 1);
   transition: box-shadow 500ms, border 1s;
 }
 
@@ -216,7 +216,7 @@ button:focus {
   text-align: center;
 }
 
-spin-container {
+.spin-container {
   text-align: center;
   margin-top: 100px;
 }
@@ -266,21 +266,17 @@ spin-container {
 }
 
 @keyframes rotate {
-  
   0% {
     transform: rotateZ(-360deg);
   }
-
   100% {
     transform: rotateZ(0deg);
   }
 }
 @keyframes rotate2 {
-
   0% {
     transform: rotateZ(360deg);
   }
-
   100% {
     transform: rotateZ(0deg);
   }
