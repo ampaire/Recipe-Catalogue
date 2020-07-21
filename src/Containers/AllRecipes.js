@@ -25,7 +25,6 @@ const AllMeals = props => {
       <div className="">
 
         <span className="">
-
           <CategoryFilter onChange={handleFilterChange} value={current} />
         </span>
         <h1 className="text-center">
