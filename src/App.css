@@ -57,12 +57,13 @@
 }
 
 button {
-  color: white;
+  color: black;
   margin: 20px 15px 0 0;
   font-size: 14px;
   text-decoration: none;
   padding: 10px;
-  background: transparent;
+  background: coral;
+  justify-content: space-between;
   border: 1px solid white;
   border-radius: 5px;
   min-width: 100px;
@@ -295,4 +296,9 @@ button:focus {
 
 .ingridients {
   background-color: rgb(248, 248, 248);
+}
+
+.ingd-btns button {
+  margin-right: 40%;
+  text-align: center;
 }

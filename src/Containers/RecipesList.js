@@ -7,7 +7,7 @@ import fetchAllMeals from '../Actions/fetchAll';
 import fetchMeal from '../Actions/fetchSingle';
 import { getProductsError, getProducts, getProductsPending } from '../Settings/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
-import Spiner from '../Components/Loading';
+import PageLoader from '../Components/Loading';
 
 const MealsList = props => {
   const {
@@ -23,7 +23,7 @@ const MealsList = props => {
     return true;
   };
 
-  if (!shouldComponentRender()) { return <Spiner />; }
+  if (!shouldComponentRender()) { return <PageLoader />; }
   return (
     <div>
       <div className="container">

@@ -5,7 +5,7 @@ const CategoryFilter = ({ onChange, value }) => {
   const categories = ['Beef', 'Chicken', 'Dessert', 'Lamb', 'Miscellaneous', 'Pasta', 'Pork', 'Seafood', 'Side', 'Starter', 'Vegan', 'Vegetarian', 'Breakfast', 'Goat'];
   return (
     <div className="cat-filter">
-      <h2>SELECT CATEGORY</h2>
+      <h2>CHOOSE ANOTHER CATEGORY</h2>
       <select onChange={onChange} value={value} className="filter m-20">
         {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
       </select>

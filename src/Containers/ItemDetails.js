@@ -35,12 +35,14 @@ const MealDetails = props => {
         <Image className="item-i shadow" src={img} name={name} />
         <div className="w-50">
           <RecipeDescription category={category} className="ingridients" area={area} ingredients={ingredients} />
-          <Link to="/">
-            <button type="button" onClick={resetSelected} className="shadow btn">Home</button>
-          </Link>
-          <Link to={`/category/${category}`}>
-            <button type="button" onClick={resetSelected} className="shadow btn">Previous</button>
-          </Link>
+          <div className="ingd-btns">
+            <Link to="/">
+              <button type="button" onClick={resetSelected} className="shadow btn">Home</button>
+            </Link>
+            <Link to={`/category/${category}`}>
+              <button type="button" onClick={resetSelected} className="shadow btn">Back</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
