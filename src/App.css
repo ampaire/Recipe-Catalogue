@@ -267,20 +267,12 @@ button:focus {
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotateZ(-360deg);
-  }
-  100% {
-    transform: rotateZ(0deg);
-  }
+  0% { transform: rotateZ(-360deg) }
+  100% { transform: rotateZ(0deg) }
 }
 @keyframes rotate2 {
-  0% {
-    transform: rotateZ(360deg);
-  }
-  100% {
-    transform: rotateZ(0deg);
-  }
+  0% { transform: rotateZ(360deg)}
+  100% { transform: rotateZ(0deg) }
 }
 
 #text {
