@@ -23,19 +23,17 @@ const RecipeDescription = ({
       </span>
     </p>
     <hr />
-    <div className="d-flex flex-w">
-      <p className="text-b">
-        ingredients:
-      </p>
-      {ingredients.map(el => (
-        <span className="m-10 shadow ingredient" key={Math.random() * 1000}>
-          {el}
-          {' '}
-          |
-          {' '}
-        </span>
-      ))}
-    </div>
+    <p className="text-b">
+      Ingredients:
+    </p>
+    {ingredients.map(el => (
+      <span className="m-10 shadow ingredient" key={Math.random() * 1000}>
+        {el}
+        {' '}
+        |
+        {' '}
+      </span>
+    ))}
     <hr />
   </div>
 );

@@ -31,11 +31,13 @@ const AllMeals = props => {
           {' '}
           Currently Showing:
           {' '}
-          {current || category }
-          {' '}
-          {' '}
-          Recipes
-          {' '}
+          <u>
+            {current || category }
+            {' '}
+            {' '}
+            Recipes
+            {' '}
+          </u>
         </h1>
       </div>
       <MealsList category={category} />
