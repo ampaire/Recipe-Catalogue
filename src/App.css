@@ -164,8 +164,8 @@ button:focus {
 }
 
 .top-text:hover {
-  background-color: rgb(224, 221, 221);
-  color: rgb(32, 8, 1);
+  background-color: black;
+  color: white;
 }
 
 .meal-preview {
