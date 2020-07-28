@@ -35,8 +35,8 @@ describe('Header Component', () => {
     component = setup();
   });
 
-  it('should render two divs', () => {
-    expect(component.find('div').length).toBe(2);
+  it('should render one divs', () => {
+    expect(component.find('div').length).toBe(1);
   });
 
   it('should render 6 span element', () => {

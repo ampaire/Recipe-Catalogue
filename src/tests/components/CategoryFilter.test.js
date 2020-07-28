@@ -17,7 +17,7 @@ describe('Header Component', () => {
     component = setup();
   });
 
-  it('should have one spane', () => {
+  it('should have one span', () => {
     expect(component.find('select').length).toBe(1);
   });
 });

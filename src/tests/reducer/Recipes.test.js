@@ -7,7 +7,7 @@ const initialState = {
   category: undefined,
 };
 
-describe('update categpry', () => {
+describe('update category', () => {
   it('should be able to change category', () => {
     expect(allMealsReducer(initialState, { type: 'FETCH_PRODUCTS_PENDING' })).toEqual({ ...initialState, pending: true });
   });
