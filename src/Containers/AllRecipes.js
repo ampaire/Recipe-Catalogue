@@ -24,21 +24,9 @@ const AllMeals = props => {
     <div>
       <div className="">
 
-        <span className="">
+        <div className="m-b5">
           <CategoryFilter onChange={handleFilterChange} value={current} />
-        </span>
-        <h1 className="text-center">
-          {' '}
-          Currently Showing:
-          {' '}
-          <u>
-            {current || category }
-            {' '}
-            {' '}
-            Recipes
-            {' '}
-          </u>
-        </h1>
+        </div>
       </div>
       <MealsList category={category} />
     </div>

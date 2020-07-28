@@ -92,7 +92,7 @@ button:focus {
   margin: 0;
   text-decoration: none;
   border-radius: 5px;
-  border-bottom: rgb(236, 230, 230) 2px solid;
+  border-bottom: rgb(43, 42, 42) 2px solid;
   box-shadow: 1px 5px 9px 3px rgba(3, 3, 3, 0.6);
   background-color: rgba(20, 20, 20, 1);
 }
@@ -311,9 +311,6 @@ button:focus {
   width: 60%;
 }
 
-.right {
-  text-align: right;
-  font-size: 3em;
-  margin-top: -4%;
-  margin-bottom: -0.02%;
+.m-b5 {
+  margin-bottom: 5%;
 }
