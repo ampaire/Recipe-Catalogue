@@ -1,14 +1,26 @@
 <h1 align="center"> The CookBook</h1>
-![screenshot]()
+![screenshot](src/Assets/home.png)
+
 
 The objective of this project was to create a single page recipe catalogue using React, Redux and TheMealDB API. 
 
 ## Features
 - A user can view all the meals in the CookBook
-- A user can choose a category to view e.g beef only, Chicken only etc
-- Under each category, A user gets to see a variety of dishes and they can choose a dish of preference
-- Each dish choosen has a list of all the ingrideients that were used to prepare is
+![screenshot](src/Assets/home.png)
 
+- A user can click on any category and get to see the meals listed under that category and in this case we are seeing the breakfast category.
+![screenshot](src/Assets/meals.png)
+
+- A user can choose a category to view e.g beef only, Chicken only
+![screenshot](src/Assets/category.png)
+
+- Under each category, A user gets to see a variety of dishes and they can choose a dish of preference
+- Each dish choosen has a list of all the ingrideients that were used to prepare it, area where it originates from and the category it belongs to
+![screenshot](src/Assets/detail.png)
+
+
+## [Demo Link](https://the-recipebook.herokuapp.com/)
+<hr/>
 
 ## TOOLS
 

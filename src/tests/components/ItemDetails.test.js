@@ -35,7 +35,7 @@ describe('Header Component', () => {
     component = setup();
   });
 
-  it('should render one divs', () => {
+  it('should render one div', () => {
     expect(component.find('div').length).toBe(1);
   });
 
