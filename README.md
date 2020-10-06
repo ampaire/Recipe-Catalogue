@@ -15,7 +15,7 @@ The objective of this project was to create a single page recipe catalogue using
 - A user can choose a category to view e.g beef only, Chicken only
 ![screenshot](src/Assets/category.png)
 
-- Under each category, A user gets to see a variety of dishes and they can choose a dish of preference
+- Under each category, a user gets to see a variety of dishes to make a choice from.
 - Each dish choosen has a list of all the ingrideients that were used to prepare it, area where it originates from and the category it belongs to
 ![screenshot](src/Assets/detail.png)
 
