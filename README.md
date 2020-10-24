@@ -38,7 +38,7 @@ The objective of this project was to create a single page recipe catalogue using
 
 ## Getting Started
 
-Follow the following steps to run the project on your computer
+Follow the following steps to setup and run the project on your computer
 
 ### Prerequisites
 
