@@ -16,7 +16,7 @@ The objective of this project was to create a single page recipe catalogue using
 ![screenshot](src/Assets/category.png)
 
 - Under each category, a user gets to see a variety of dishes to make a choice from.
-- Each dish chosen has a list of all the ingredients that were used to prepare it, area where it originates from and the category it belongsto
+- Each dish chosen has a list of all the ingredients that were used to prepare it, area where it originates from and the category it belongs to
 ![screenshot](src/Assets/detail.png)
 
 
@@ -50,9 +50,9 @@ Follow the following steps to setup and run the project on your computer
 
 `Knowledge of HTML,CSS, Javascript, React, Redux`
 
-### Setup
+### Setting up
 
-clone this repo by typing `git clone`
+clone this repo by typing `git clone "https:"`
 
 ### Install
 
